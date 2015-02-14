@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './blairtopsandtile'
-run MySinatraApp
+require './topsandtile'
+run TopsAndTile
