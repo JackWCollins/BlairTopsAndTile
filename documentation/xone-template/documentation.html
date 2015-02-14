@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Xone HTML Template Documentation</title>
+    <link rel="stylesheet" href="./style/style.css" type="text/css">
+</head>
+
+<body>
+<div id="page">
+
+	<div class="wrapper clearfix">
+	
+    	<div id="sidebar" class="right_float">
+        	<h3><strong>Table of Contents</strong></h3>
+            
+            <ul id="mainnav">
+				<li><a href="#preface"><strong>Preface</strong></a></li>
+            	<li><a href="#support"><strong>Support</strong></a></li>
+            	<li><a href="#introduction"><strong>Introduction</strong></a></li>
+            	<li><a href="#generalrules"><strong>General Rules</strong></a></li>
+            	<li><a href="#htmlstructure"><strong>HTML Structure</strong></a></li>
+            	<li><a href="#sections"><strong>Sections</strong></a></li>
+            	<li><a href="#fonts"><strong>Fonts</strong></a></li>
+            	<li><a href="#color"><strong>Changing Color</strong></a></li>
+            	<li><a href="#header"><strong>Header</strong></a></li>
+            	<li><a href="#logo"><strong>Change Logo</strong></a></li>
+            	<li><a href="#menu"><strong>Menu / Navigation</strong></a></li>
+            	<li><a href="#slider"><strong>Slider</strong></a></li>
+            	<li><a href="#masonry"><strong>Portfolio</strong></a></li>
+            	<li><a href="#bgvideo"><strong>Background Video</strong></a></li>
+            	<li><a href="#parallax"><strong>Parallax Background</strong></a></li>
+            	<li><a href="#easyopener"><strong>Easy Opener (Video Lightbox)</strong></a></li>
+            	<li><a href="#contact"><strong>Contact Form</strong></a></li>
+            	<li><a href="#map"><strong>Google Map</strong></a></li>
+            	<li><a href="#video-audio"><strong>Selfhosted Audio/Video</strong></a></li>
+            	<li><a href="#elements"><strong>Elements / Shortcodes</strong></a></li>
+            	<li><a href="#retina"><strong>Retina</strong></a></li>
+            	<li><a href="#css"><strong>Css Files</strong></a></li>
+            	<li><a href="#javascript"><strong>Javascript</strong></a></li>
+            	<li><a href="#ressources"><strong>Ressources</strong></a></li>
+            	<li><a href="#faq"><strong>FAQ</strong></a></li>
+            	<li><a href="#updates"><strong>Updates</strong></a></li>
+            </ul>
+        </div>
+    
+    
+        <div id="content" class="left_float">
+        	<h1><strong>Xone HTML Template Documentation</strong></h1>
+            
+            <div id="preface" class="section">
+            	<h4 class="sectiontitle"><strong>Thanks</strong></h4>
+                <p>
+                First of all, a big thanks for purchasing this template.  This document includes a guide and general information about the template.  Feel free to contact me if you have any questions that are beyond the scope of this document.
+                </p>
+            </div>
+            
+            <div id="support" class="section">
+            	<h4 class="sectiontitle"><strong>Support</strong></h4>
+                <p>
+                Please read the documentation before seeking support.  If you have any questions that are beyond the scope of this document you can still contact me by using the contact form on the themeforest profil page. <a href="http://themeforest.net/user/SpabRice">SpabRice</a>.  Please enter the name of the item you've bought in the textmessage.<br />
+                <strong>Do not use the comment section on the themeforest item page.  This will slow down the support process</strong>
+                </p>
+                <p>
+                <strong>Important</strong>: Theme support does not include any sort of customizations for you or your client.</strong>
+                </p>
+            </div>
+            
+            
+          <div id="introduction" class="section">
+           	<h4 class="sectiontitle"><strong>Introduction</strong></h4>
+            	<p>
+            	You bought an HTML / CSS template, so you need some basic knowledge for those 2 languages.  The Best way is to play around with the different elements/sections but  you find some helpfull tips and explanations how this template is build up and works. <br>
+				<b>Please compare all the explanation from this file with the original files to have a better understanding.</b>
+            	</p>
+          </div>
+          
+          <div id="generalrules" class="section">
+           	<h4 class="sectiontitle"><strong>General Rules</strong></h4>
+            	<p>
+            	These are general classes, id's or tags which you will find several times in almost all html files.
+            	</p>
+            	<p><strong>#page-content:</strong> you will find this element on every page. It contains all main content (header,maincontent,footer)</p>
+				<p><strong>.wrapper:</strong> it wrapps the element to a the main content width. (1100px = default / 940px for smaller screens / 740px for tablet (portrait) / 300px for phones).</p>
+            	<p><strong>.main-content:</strong> if you use a layout with a sidebar (aside) you need add this classname to the main content.  Use this tag in combination with <i>right-float</i> or <i>left-float</i></p>
+            	<p><strong>aside:</strong> this is the sidebar.  Use this tag in combination with <i>right-float</i> or <i>left-float</i>.</p>
+            	<p><strong>.left-float:</strong> use this classname for any element you want to float to the left.</p>
+            	<p><strong>.right-float:</strong> use this classname for any element you want to float to the right.</p>
+            	<p><strong>.clearfix:</strong> for all tags which contains any floating element.</p>
+            	<p><strong>.align-center:</strong> use this class if you want to align the text from a whole section or just an element.</p>
+            	<p><strong>.text-light:</strong> this class is needed if you use a darker background for a section (for example for the footer or a dark parallay section)</p>
+				<p><b>EXAMPLE OF THE ABOVE EXPLANATIONS</b></p>
+<pre>
+...
+&lt;div class="wrapper clearfix"&gt;
+
+ &lt;div class="main-content left-float"&gt;
+ &lt;/div&gt;
+
+ &lt;aside class="right-float"&gt;
+ &lt;/aside&gt;
+
+&lt;/div&gt; 
+...
+</pre>
+            <p><i>The left / right-float class are very helpfull.  In a template with sidebar for example you can easily change the position of the sidebar by just changing the classname without doing any changes at the css.</i></p>
+		</div>
+          
+		<div id="htmlstructure" class="section">
+			<h4 class="sectiontitle"><strong>HTML Structure</strong></h4>
+		   	<p>
+			This template is a <b>One Page template</b> so you need to respect some structure.  Here's a basic structure example.
+			</p>
+<p><pre>
+...
+&lt;div id="page-content"&gt;
+
+ &lt;header&gt;
+ &lt;/header&gt;
+	
+ &lt;div class="page-body"&gt;
+  &lt;section id="about"&gt;
+   &lt;div class="section-inner"&gt;
+    CONTENT FOR ABOUT SECTION GOES HERE
+   &lt;/div&gt;
+  &lt;/section&gt; 
+		
+  &lt;section id="services"&gt;
+   &lt;div class="section-inner"&gt;
+    CONTENT FOR SERVICES SECTION GOES HERE
+   &lt;/div&gt;
+  &lt;/section&gt; 
+&lt;/div&gt;
+	
+ &lt;footer&gt;
+ &lt;/footer&gt;
+	
+&lt;/div&gt;
+...
+</pre></p>
+		<p>
+		You can choose custom id names for the different "sections".  
+		Just make sure that the same name is used for the navigation and that they are unique (for the index templates with scroll effect).
+		</p>
+		</div>
+		  
+		  
+		<div id="sections" class="section">
+			<h4 class="sectiontitle"><strong>Sections</strong></h4>
+			<p>
+				As you've seen above a section is always followed by a "section-inner". This is a <b>must</b>!  You can optionally add the class <b>wrapper</b> the the section-inner if you know that this section will not contain any other element which will be fullwidth.<br>
+				<i>In the index.html, the contact section is the only section which does this, because it's the only section which have no parallax element. For all other sections there has been added an additional div tag with the wrapper class (See example below).</i> 
+			</p>
+<p><pre>
+...
+&lt;section id="about"&gt;
+ &lt;div class="section-inner"&gt;
+		
+  &lt;div class="wrapper"&gt;
+  
+  &lt;div class="section-title"&gt;
+   &lt;h2&gt;About us&lt;/h2&gt;
+   &lt;div class="seperator size-small"&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;
+   &lt;h4 class="subtitle"&gt;We are a small creative team&lt;/h4&gt;
+  &lt;/div&gt;
+  ...
+  &lt;/div&gt; &lt;!-- END .wrapper -->
+		
+ &lt;/div&gt;
+&lt;/section&gt; 
+...
+</pre></p>
+		<p>
+			You also see how to add the section-title.
+		</p>
+		<p>
+			The sections have a default top padding (no bottom-padding).  For all templates I always give the last section an additional spacer in order not to stick to the footer.
+		</p>
+<p><pre>
+...
+  &lt;div class="spacer spacer-big">&lt;/div>
+				
+ &lt;/div> &lt;!-- END .section-inner -->
+&lt;/section> &lt;!-- END SECTION #contact--> 
+</pre></p>	
+		<p>
+			In any case you don't want the default top padding, you can add the class "no-padding".<br>
+			<i>Example: Done in the index.html & index-portfolio.html for the first section in order to stick the first section (slider & portfolio) to the header. Otherwhise they would have been a spacing between.</i>
+		</p>
+<p><pre>
+&lt;section id="about" class="no-padding">
+</pre></p>	
+		</div>
+
+		
+		
+		
+		<div id="fonts" class="section">
+			<h4 class="sectiontitle"><strong>Fonts</strong></h4>
+			<p>You have to include the fonts in every html you use/create.  Make sure to include them in the head before the css files.</p>
+			<p><pre>
+&lt;link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,800,600|
+Raleway:300,600,900' rel='stylesheet' type='text/css'&gt;</pre></p>
+			<p>
+			You can see that I included 2 Fonts (Open Sans & Raleway) in different weights.<br>
+			So when I choose this font in the style.css I always added the weight I wanted.
+			</p>
+			<p><pre>
+h1, h2, h3, h4, h5, h6 {
+ font-family: 'Raleway'; 
+ font-weight: 400;
+ color: #262626;
+}
+ 
+.section-title h2 { 
+ font-weight: 900;  
+}</pre></p>
+			<p>
+			 	<i>At line 8 of this example above I added the weight 900 for all section-title.</i>
+			</p>
+			<br><br>
+			<h5><b>Change fonts</b></h5>
+			<p>
+				To change a font choose another Webfont from the Google Font library or use other sources.<br>
+				You have to go through the syle.css (+ settings.css) and change all selectors where I assigned the font.<br><br>
+				<b>Tip</b>: use the search/replace function (Mac = cmd+f / Win = ctrl+f) which almost every editor got.
+			</p>
+			<p class="attention">
+				<b>Revolution Slider</b>: The font captions settings for the revolution slider are in the settings.css.
+			</p>
+		</div>	
+		
+		<div id="color" class="section">
+			<h4 class="sectiontitle"><strong>Change Color</strong></h4>
+			<p>
+				The color which I used for the template is <span class="accent">#4da5f5</span>.<br>
+				Same as for the font.  Go through the style.css and replace my color calue with yours.
+			</p>
+	  	</div>
+		
+		<div id="header" class="section">
+			<h4 class="sectiontitle"><strong>Header</strong></h4>
+			<p>
+				Use this markup for the header
+			</p>
+			<pre>
+&lt;!-- HEADER -->
+&lt;header id="header">        
+ &lt;div class="header-inner wrapper clearfix">
+ 
+  &lt;div id="logo" class="left-float">
+   &lt;a id="defaut-logo" class="logotype" href="index.html">
+    &lt;img src="files/uploads/xone-logo.png" alt="Logo">&lt;/a>
+  &lt;/div>
+  
+  &lt;div class="menu right-float clearfix">
+   ...
+  &lt;/div>
+ 
+ &lt;/div>
+&lt;/header>
+&lt;!-- HEADER --></pre>
+			<p>
+				If you want a header which is fixed just add the class <strong>"fixed-header"</strong> to the parent page-content div.<br>
+				If you don't want a fixed header delete this classname from the div.
+			</p>
+			<pre>
+&lt;div id="page-content" <strong>class="fixed-header"</strong>></pre>
+			<p>
+				If you want the header to overlay the home slider, please add the class <strong>"header-overlay"</strong> to the header tag AND add an additional logo with id <strong>"overlay-logo"</strong>.
+			</p>
+			<pre>
+&lt;header id="header" <strong>class="header-overlay"</strong>> 
+ &lt;div class="header-inner wrapper clearfix">
+   &lt;div id="logo" class="left-float">
+   <strong>&lt;a id="overlay-logo" class="logotype" href="index.html">
+    &lt;img src="files/uploads/xone-logo-light.png" alt="Logo">&lt;/a></strong>
+   &lt;a id="defaut-logo" class="logotype" href="index.html">
+    &lt;img src="files/uploads/xone-logo.png" alt="Logo">&lt;/a>
+  &lt;/div>
+  
+ ...</pre>
+			
+						<p class="attention">
+				<strong>Note:</strong> Use the overlay header only on pages with a home-slider.
+			</p>
+			<br><br>
+			<h5><strong>Customize Header Shrinking</strong></h5>
+			<p>
+				In the style.css at line +-491 you see the styles which takes action when shrinking.<br>
+				If you don't want any shrinking effect, just delete (or better comment out) the selectors with <strong>smallheader</strong> (Line +-497 to +-514)
+			</p>
+			<br>
+			<p class="attention">
+				Make sure to have the xone-header.js included.
+			</p>
+	  	</div>
+			
+			
+		<div id="logo" class="section">
+			<h4 class="sectiontitle"><strong>Change Logo</strong></h4>
+			<p>
+				Change the path to your logo image.
+			</p>
+			<pre>&lt;a class="logotype" href="index.html">&lt;img <strong>src="files/uploads/xone-logo.png"</strong> alt="Logo">&lt;/a></pre>
+			<p>
+				By default the height of the logo is limited to 60px. So even if you have an image file which is higher than 60px it will be resized to 60px.  If you want to change that you need to do this in several places in the style.css
+			</p>
+<pre>
+<em>AT LINE 474 you should see this</em>
+#logo {
+	...
+	padding: 20px 0;
+	<strong>height: 60px;</strong>
+	
+<em>AT LINE 618</em>
+nav#main-nav > ul > li > a  {
+	...
+	<strong>line-height: 60px;</strong>
+		
+<em>AT LINE 657</em>
+nav#main-nav ul li .sub-menu {
+	...
+	<strong>top: 100px;</strong>		<em>LOGO HEIHGT + LOGO PADDING</em>
+</pre>
+	  	</div>	
+			
+			
+          
+		<div id="menu" class="section">
+			<h4 class="sectiontitle"><strong>Menu / Navigation</strong></h4>
+			<p>
+				Please use the following markup for the main navigation.
+			</p>
+            <pre>
+&lt;nav id="main-nav"&gt;
+   &lt;ul&gt;
+      &lt;li class=&quot;current-menu-item&quot;&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;li&gt;
+      &lt;li&gt;&lt;a href="#about" class="scroll-to"&gt;About&lt;/a&gt;
+	  ...
+      &lt;li>&lt;a href="elements.html">Elements&lt;/a>
+         &lt;ul class=&quot;sub-menu&quot;&gt;
+            &lt;li&gt;&lt;a href="elements.html"&gt;General Elements&lt;/li&gt;
+            ...
+         &lt;/ul&gt;   
+      &lt;li&gt;
+   &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+			<p>
+				<b>class="current-menu-item"</b>: add this classname to the actual li element.  In the elements.html for example it would be added to this li.
+			</p>
+			<p>
+				<b>href="#about"</b>: this must have the same name then the id of the section you want to assign starting by a hashtag.
+			</p>
+			<p>
+				<b>class="scroll-to"</b>: add this class to all menu items which should scroll to an section. You can also use this class on any anchor tag in combination with the right href value.<br>
+				You see that "Elements" does not this classname because it's linking to another html page. 
+			</p>
+			
+            <p class="attention">
+            <span class="red"><strong>Important:</strong></span>
+            Depending on your logo height you need to adapt this value in the css. Please see "Changing Logo" for detailed info.
+            </p>
+            <br>
+            <br>
+            <h5><strong>Bullet navigation</strong></h5>
+            <p> As you probably have seen the default/text navigation transforms into a bullet navigation after scrolling down. Place the following markup just after the default navigation.
+            </p>
+<pre>
+&lt;nav id="menu-controls">
+ &lt;ul>
+  &lt;li class="current-menu-item">&lt;a href="#home" class="scroll-to">
+   &lt;span class="c-dot">&lt;/span><span class="c-name">Home&lt;/span>&lt;/a>&lt;/li>
+  &lt;li>&lt;a href="#about" class="scroll-to">
+   &lt;span class="c-dot">&lt;/span>&lt;span class="c-name">About&lt;/span>&lt;/a>&lt;/li>
+  ...
+ &lt;/ul>
+&lt;/nav>
+</pre>
+			<p>
+				Just delete this navigation markup on the files if you don't want it.
+			</p>
+			<p class="attention">
+            <span class="red"><strong>Important:</strong></span>
+            Do not place any submenu for the bullet navigation.
+            </p>
+          </div>
+          
+          <div id="slider" class="section">
+           	<h4 class="sectiontitle"><strong>Slider</strong></h4>
+				<p>
+				This template uses 2 Slider scripts.
+				</p>
+				<ul>
+					<li><b>Revolution Slider</b> as Home Slider</li>
+					<li><b>Flexslider</b> for all other content sliders (portfolio,blog,testimonials)</li>
+				</ul>
+            <br><br>
+            <h5><strong>Revolution Slider</strong></h5>
+            <p>
+            	For a full documentation of the revolution slider you'll find a second documentation folder called "revolution-slider".<br>
+			  	Please see the settings.css for the slider stylings. (captions, navigation, etc)
+            </p>
+            <p>
+            Use this markup.
+            </p>
+            <pre>
+&lt;!-- REVOLUTION SLIDER -->
+&lt;div class="home-slider-container">
+ &lt;div class="home-slider" >
+  &lt;ul>
+  
+  &lt;!-- THE SLIDES -->
+  &lt;li>&lt;/li>
+  ...
+  
+  &lt;/ul>
+ &lt;/div>
+&lt;/div>        
+&lt;!-- REVOLUTION SLIDER -->
+</pre>
+            
+			<p>
+            After you've added your markup and the different slides initialise the slider in the script.js at line +-296.
+            </p>
+            <pre>
+/*---------------------------------------------- 
+R E V O L U T I O N   S L I D E R
+------------------------------------------------*/
+if(jQuery().revolution) {
+ jQuery('.home-slider').revolution({
+  delay:10000,
+  onHoverStop:"on",
+  navigationType:"none",
+  fullWidth:"off",
+  fullScreen:"on",
+  fullScreenOffsetContainer: "#pseudo-header"
+ });
+}</pre>
+            <p class="attention">
+            If you choose a fullscreen slider the "fullScreenOffsetContainer" must be <strong>#pseudo-header</strong>
+            </p>
+			<br>
+            <h6><strong>Combining RS Slider + Background video / Parallax Background</strong></h6>
+				<p>
+					You can combine the revolution slider + Background video  OR Parallax Background.  To do so you must first use the transparent.png image file as main image of the different slides.
+				</p>
+				<pre>
+&lt;!-- THE FIRST SLIDE -->
+&lt;li data-transition="fade" data-slotamount="5" data-masterspeed="800" >
+<b>&lt;img src="files/uploads/transparent.png"></b></pre>
+				<p>
+				After this you just need to add the general background video / parallax rules to the parent section (probably #home).
+				</p>
+            <br><br>
+            <h5><strong>Flexslider Slider</strong></h5>
+            <p>
+            I used the flexslider plugin for all slides which are in the main content area.  For example portfolio, testimonials or blog posts.
+            Please make sure to include the <span class="accent">flexslider.css</span> and <span class="accent">flexslider-min.js</span> for the pages you want to use the slider.
+            </p>
+            <pre>
+&lt;div class=&quot;flexslider-container portfolio-slider&quot;&gt;
+   &lt;div class=&quot;flexslider&quot;&gt;
+      &lt;ul class=&quot;slides&quot;&gt;
+         &lt;li&gt;&lt;img src=&quot;files/uploads/1100-500.jpg&quot; alt=&quot;&quot;/&gt;&lt;/li&gt;
+         &lt;li&gt;&lt;img src=&quot;files/uploads/1100-500.jpg&quot; alt=&quot;&quot;/&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+   &lt;/div&gt;
+&lt;/div&gt;</pre>
+			<p>
+            You will find the script initialiser in the script.js at line 374.
+            </p>
+			<pre>
+if(jQuery().flexslider) { 
+ jQuery(el+" .flexslider").flexslider({
+  animation: "slide",
+  slideshowSpeed: 7000,
+  animationDuration: 1000,
+  slideshow: false,
+  directionNav: false,
+  controlNav: true,
+  smoothHeight: true,
+  touch: true,
+  video: true,
+  randomize: false
+ }); 
+}//end flexslider</pre>
+          </div>
+          
+          
+          <div id="masonry" class="section">
+          		<h4 class="sectiontitle"><strong>Portfolio Layout</strong></h4>
+            	<p>
+            	The isotope script is used for the portfolio preview layout.  Create as much items as you wants, here's the markup.
+            	</p> 
+            
+            <p><pre>
+&lt;div id=&quot;portfolio-grid&quot; class=&quot;masonry portfolio-entries clearfix&quot; data-maxitemwidth="370"&gt;
+   
+   &lt;div class="portfolio-masonry-entry masonry-item branding"&gt;
+      &lt;div class="entry-thumb portfolio-thumb"&gt;
+         &lt;div class="imgoverlay text-light"&gt;
+            &lt;a href="portfolio-work-01.html" class="load-content"&gt;
+               &lt;img src="files/uploads/550x350.jpg" alt="SEO IMAGE NAME" /&gt;
+               &lt;div class=&quot;overlay&quot;&gt;
+                &lt;span class="overlaycolor">&lt;/span>
+                &lt;span class="overlayinfo">&lt;h6>Branding&lt;/h6>&lt;/span>
+               &lt;/div&gt;
+            &lt;/a&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="entry-intro portfolio-intro"&gt;
+       &lt;div class="intro-headline portfolio-intro-headline">
+         &lt;h5 class="portfolio-name">&lt;a href="portfolio-work-01.html" class="load-content">
+         &lt;strong>Project Name&lt;/strong>&lt;/a>&lt;/h5>
+       &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+   
+   ...
+
+&lt;/div&gt; &lt;!-- END #portfolio-grid --&gt;</pre>
+			<p>
+            <strong>Details</strong>
+            </p>
+            <ul>
+            	<li><span class="accent">#portfolio-grid</span> -> you can customize this name, make sure to use the same name in the filter option (see below).</li>
+            	<li><span class="accent">.data-maxitemwidth</span> -> This handles the itemwidth. as higher the value as bigger the thumbnails.</li>
+            	<li><span class="accent">.branding</span> -> This is the name for the filter attribute</li>
+            </ul>
+            <p>
+            You can also add the classname <b>portfolio-spaced</b> to the grid element.  This will add a spacing between the thumbnails which you can manage in the css.
+            </p>
+			<p><pre>
+&lt;div id=&quot;portfolio-grid&quot; class=&quot;masonry portfolio-entries <b>portfolio-spaced</b> ...</pre></p>
+				<p>
+            For a boxed layout just put a wrapper element outside the grid.
+            </p>
+			<p><pre>
+&lt;div class="wrapper">
+ &lt;div id=&quot;portfolio-grid&quot;  ...
+ ...
+ &lt;/div&gt; &lt;!-- END #portfolio-grid --&gt;
+&lt;/div&gt; &lt;!-- END .wrapper --&gt;</pre></p>
+				<p>
+				For more options please take a look at the portfolio-layout.html
+				</p>
+				<br><br>
+            	<h5><strong>Filter</strong></h5>
+				<p>
+            The filter is part of the isotope script.  It will only work on masonry-items. <br>
+            All filter anchors needs a <span class="accent">data-option-value</span> attribute with the correct filter name (example: .branding) 
+            </p>
+			<pre>
+&lt;ul id="portfolio-filter" class="filter clearfix" data-related-grid="portfolio-grid">
+  &lt;li&gt;&lt;a class=&quot;active&quot; href="#" data-option-value=&quot;*&quot;&gt;All&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.web&quot; href=&quot;#&quot; title=&quot;Web&quot;&gt;Web&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.branding&quot; href=&quot;#&quot; title=&quot;Motion&quot;&gt;Motion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a data-option-value=&quot;.motion&quot; href=&quot;#&quot; title=&quot;Print&quot;&gt;Print&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+				<p>
+					It's important that the value of <b>data-related-grid</b> is the same than the id name of the grid (see above).
+				</p>
+				<br><br>
+            	<h5><strong>Loading Pages via Ajax</strong></h5>
+				<p class="attention">
+            		<strong>Note:</strong>
+                	Google chrome does not support ajax loading "locally".  Once uploaded to a server, it will work fine.
+            	</p>
+				<p>
+				If you don't want to load your projects in a new page, but use ajax to load it smoothly, just add the classname <strong>load-content</strong> to the anchor tag.  <br>
+				<i>Make sure to have the xone-loader.js included.</i>
+				</p>
+				<pre>
+&lt;a href="portfolio-work-01.html" <strong>class="load-content"</strong>&gt;</pre>
+				<p>
+				After this, add the section where the loaded content is displayed
+				</p>
+				<pre>
+&lt;!-- ===================
+AJAX AREA
+=====================-->    
+&lt;div id="ajax-portfolio" class="ajax-section">
+ &lt;div id="ajax-loader">&lt;div class="loader-icon">&lt;span class="spinner">&lt;/span>&lt;span>&lt;/span>&lt;/div>&lt;/div>
+  &lt;div class="ajax-content clearfix"> 
+   &lt;!-- THE LOADED CONTENT WILL BE ADDED HERE -->
+  &lt;/div>
+ &lt;div class="close-project">&lt;a href="index.html">Close&lt;/a>&lt;/div>
+&lt;/div>    
+&lt;!-- ===================
+AJAX AREA
+=====================--> </pre>
+				<p class="attention">
+					The ajax loader can only be used <strong>ONCE</strong> on a page.  Please don't change the classnames and id names.
+				</p>
+				<br><br><br>
+				<h4 class="sectiontitle"><strong>Portfolio Single</strong></h4>
+				<p>
+					The ajax loader takes all infos which are in "portfolio-single".  So make sure not to change this id name if you use the ajax loader.
+				</p>
+				<pre>
+&lt;!-- PORTFOLIO SECTION -->
+&lt;section id="portfolio">
+ &lt;div <strong>id="portfolio-single"</strong> class="section-inner">
+  ...
+ &lt;/div> &lt;!-- END #portfolio-single .section-inner -->
+&lt;/section> &lt;!-- END SECTION #portfolio-->
+&lt;!-- PORTFOLIO SECTION --></pre>
+				
+          </div>
+		  
+		  	<div id="bgvideo" class="section">
+          		<h4 class="sectiontitle"><strong>Background Video</strong></h4>
+				<p>
+				In fact you can add a background video to every kind of element but I usually created an "horizontalsection" to do so. Make sure that this element is not wrapped in a .wrapper element in order to make it fullwidth.
+				</p>
+				<p>
+				<strong>Make sure to provide your video in 3 different formats:</strong>
+				</p>
+				<ul>
+					<li>mp4</li>
+					<li>webm</li>
+					<li>ogg</li>
+				</ul>
+				<p>
+				Add the classname <strong>"videobg-section"</strong> (and optionally 'text-light' if you use a dark video) to the element, and fill in the different <strong>"data-"</strong> options.
+				</p>
+				<pre>
+&lt;div id="parallax-video" class="horizontalsection text-light <strong>videobg-section</strong>"
+ <strong>data-videofile="files/uploads/steven" 
+ data-videowidth="1280"
+ data-videoheight="720"
+ data-videoposter="files/uploads/poster-image.jpg"
+ data-videoparallax="true"
+ data-videooverlaycolor="#000000"
+ data-videooverlayopacity="0.5"
+ data-sound="true"</strong>></pre>
+ 				<ul>
+					<li><b>data-videofile</b> -> please add the path to your files <strong>without the file ending</strong> (ie: .mp4)</li>
+					<li><b>data-videowidth + data-videoheight</b> -> very important that you enter the right values</li>
+					<li><b>data-videoposter</b> -> this poster is shown for devices which don't support background videos</li>
+					<li><b>data-videoparallax</b> -> true or false for a parallax effect</li>
+					<li><b>data-videooverlaycolor</b> -> optional overlay color / leave empty if not wanted</li>
+					<li><b>data-videooverlayopacity</b> -> opacity value for the overlay</li>
+					<li><b>data-sound</b> -> if true, the video also plays the sound with option to mute it manually</li>
+				</ul>
+			</div>
+			
+			<div id="parallax" class="section">
+          		<h4 class="sectiontitle"><strong>Parallax Backgrounds</strong></h4>
+				<p>
+				Same as background video, you could add a parallax image to every element but I usually created an "horizontalsection" to do so. Make sure that this element is not wrapped in a .wrapper element in order to make it fullwidth.
+				</p>
+				<p>
+				Add the classname "parallax-section" (and optionally 'text-light' if you use a dark background) to the element.
+				</p>
+				<pre>
+&lt;div id="facts" class="horizontalsection text-light <strong>parallax-section</strong>"></pre>
+ 				<p>
+					Once done, you just need to add your background image to this section via css.<br>
+					Please make sure to use a center center alignment and a cover background size.  This is important for the devices which does not support a smooth parallax effect.
+				</p>
+				<pre>
+#facts.parallax-section { 
+ background:url(../uploads/parallax-bg1.jpg) <strong>center center</strong> repeat; background-size: <strong>cover</strong>; 
+}
+				</pre>
+			</div>
+			
+			<div id="easyopener" class="section">
+          		<h4 class="sectiontitle"><strong>Easy Opener</strong></h4>
+				<p>
+					If you want to open a video from vimeo or youtube in a light put the link to the video (which is provided in the embed code) as href and add the width / height and the classname easy-opener.
+				</p>
+				<pre>
+<strong>&lt;a href="http://player.vimeo.com/video/65463156" data-type="video" data-width="500" 
+data-height="281" class="easy-opener">...</strong></pre>
+			</div>
+          
+          <div id="audio-video" class="section">
+           	<h4 class="sectiontitle"><strong>Video</strong></h4>
+            <br><br>
+            <h5><strong>Embedded Video</strong></h5>
+            <p>
+            Go to vimeo ,youtube or any other site and copy the embedding <b>iframe</b> code.
+            </p> 
+            <pre>
+&lt;iframe src=&quot;http://player.vimeo.com/video/20621393&quot; width=&quot;500&quot; height=&quot;281&quot; 
+frameborder=&quot;0&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;</pre>
+			<br><br>
+            <h5><strong>Selfhosted Video</strong></h5>
+            <p>
+            When using an selhosted video you need to provide the video in 3 different files to make it work in all browser.
+            </p> 
+            <ul>
+            	<li>.m4v</li>
+            	<li>.ogv</li>
+            	<li>.webm</li>
+            </ul>
+            <pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+jQuery(document).ready(function(){
+   if(jQuery().jPlayer) {
+      jQuery(&quot;#jquery_jplayer_video1&quot;).jPlayer({
+         ready: function () {
+            jQuery(this).jPlayer(&quot;setMedia&quot;, {
+               m4v: &quot;YOURVIDEOPATH.m4v&quot;,
+               ogv: &quot;YOURVIDEOPATH.ogv&quot;,
+               webmv: &quot;YOURVIDEOPATH.webm&quot;,
+               poster: &quot;YOURIMAGE.jpg&quot;
+            });
+         },
+         size: {
+            width: &quot;100%&quot;,
+            height: &quot;auto&quot;
+         },
+         swfPath: &quot;files/jplayer&quot;,
+         cssSelectorAncestor: &quot;#jp_interface_video1&quot;,
+         supplied: &quot;ogv,m4v,webmv,all&quot;
+      });
+   }
+});
+&lt;/script&gt;
+
+
+&lt;div id=&quot;jquery_jplayer_video1&quot; class=&quot;jp-jplayer jp-jplayer-video&quot;&gt;&lt;/div&gt;
+
+   &lt;div class=&quot;jp-video-container&quot;&gt;
+      &lt;div class=&quot;jp-video&quot;&gt;
+         &lt;div class=&quot;jp-type-single&quot;&gt;
+            &lt;div id=&quot;jp_interface_video1&quot; class=&quot;jp-interface&quot;&gt;
+               &lt;ul class=&quot;jp-controls&quot;&gt;
+                  &lt;li&gt;&lt;div class=&quot;seperator-first&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;div class=&quot;seperator-second&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-play&quot; tabindex=&quot;1&quot;&gt;play&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-pause&quot; tabindex=&quot;1&quot;&gt;pause&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-mute&quot; tabindex=&quot;1&quot;&gt;mute&lt;/a&gt;&lt;/li&gt;
+                  &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-unmute&quot; tabindex=&quot;1&quot;&gt;unmute&lt;/a&gt;&lt;/li&gt;
+               &lt;/ul&gt;
+               
+               &lt;div class=&quot;jp-progress-container&quot;&gt;
+                  &lt;div class=&quot;jp-progress&quot;&gt;
+                     &lt;div class=&quot;jp-seek-bar&quot;&gt;
+                        &lt;div class=&quot;jp-play-bar&quot;&gt;&lt;/div&gt;
+                     &lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               
+               &lt;div class=&quot;jp-volume-bar-container&quot;&gt;
+                  &lt;div class=&quot;jp-volume-bar&quot;&gt;
+                     &lt;div class=&quot;jp-volume-bar-value&quot;&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+               
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt; &lt;!-- END .jp-video-container --&gt;</pre>
+   			<p>
+            Use this markup and change the path to your files.  Please make sure to have included the <span class="accent">jplayer.css</span> and the <span class="accent">jplayer.min.js</span>.
+            </p>
+			<br><br><br>
+           <h4 class="sectiontitle"><strong>Audios</strong></h4>
+			<br><br>
+            <h5><strong>Selfhosted Audio</strong></h5>
+            <p>
+            When using an selhosted audio you need to provide the audio in 2 different files to make it work in all browser.
+            </p> 
+            <ul>
+            	<li>.mp3</li>
+            	<li>.ogg (oga)</li>
+            </ul>
+            <pre>
+&lt;script type=&quot;text/javascript&quot;&gt;
+   jQuery(document).ready(function(){
+      if(jQuery().jPlayer) {
+         jQuery(&quot;#jquery_jplayer_audio2&quot;).jPlayer({
+            ready: function () {
+               jQuery(this).jPlayer(&quot;setMedia&quot;, {
+                  mp3: &quot;YOURAUDIOPATH.mp3&quot;,
+                  oga: &quot;YOURAUDIOPATH.ogg&quot;,
+                  end: &quot;&quot;
+               });
+            },
+            swfPath: &quot;files/jplayer&quot;,
+            cssSelectorAncestor: &quot;#jp_interface_audio2&quot;,
+            supplied: &quot;oga,mp3,all&quot;
+         });
+      }
+   });
+&lt;/script&gt;
+
+&lt;div id=&quot;jquery_jplayer_audio2&quot; class=&quot;jp-jplayer jp-jplayer-audio&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;jp-audio-container&quot;&gt;
+   &lt;div class=&quot;jp-audio&quot;&gt;
+      &lt;div class=&quot;jp-type-single&quot;&gt;
+         &lt;div id=&quot;jp_interface_audio2&quot; class=&quot;jp-interface&quot;&gt;
+            &lt;ul class=&quot;jp-controls&quot;&gt;
+               &lt;li&gt;&lt;div class=&quot;seperator-first&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;div class=&quot;seperator-second&quot;&gt;&lt;/div&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-play&quot; tabindex=&quot;1&quot;&gt;play&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-pause&quot; tabindex=&quot;1&quot;&gt;pause&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-mute&quot; tabindex=&quot;1&quot;&gt;mute&lt;/a&gt;&lt;/li&gt;
+               &lt;li&gt;&lt;a href=&quot;#&quot; class=&quot;jp-unmute&quot; tabindex=&quot;1&quot;&gt;unmute&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            
+            &lt;div class=&quot;jp-progress-container&quot;&gt;
+               &lt;div class=&quot;jp-progress&quot;&gt;
+                  &lt;div class=&quot;jp-seek-bar&quot;&gt;
+                     &lt;div class=&quot;jp-play-bar&quot;&gt;&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;jp-volume-bar-container&quot;&gt;
+               &lt;div class=&quot;jp-volume-bar&quot;&gt;
+                  &lt;div class=&quot;jp-volume-bar-value&quot;&gt;&lt;/div&gt;
+               &lt;/div&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+   &lt;/div&gt;
+&lt;/div&gt;  &lt;!-- END .jp-audio-container --&gt;</pre>
+   			<p>
+            Use this markup and change the path to your files.  Please make sure to have included the <span class="accent">jplayer.css</span> and the <span class="accent">jplayer.min.js</span>.
+            </p>
+          </div>
+          
+          <div id="contact" class="section">
+           	<h4 class="sectiontitle"><strong>Contact Form</strong></h4>
+            <p>
+            	Create a new form with all the attributes like below
+            </p> 
+            <pre>
+&lt;form id=&quot;contact-form&quot; class=&quot;checkform&quot; action=&quot;&quot; 
+target=&quot;contact-send.php&quot; method=&quot;post&quot; &gt;</pre>
+            <p>
+				You must at least add 3 form-rows with the <span class="accent">name, email + message</span>.
+				These 3 fields are required for the sending. Take a look at the markup on the contact section of the index.html
+			</p>		
+			<p>	
+            	You can add more fields if wanted.<br>
+				Please add the classname <span class="accent">req</span> to the label if this field is required.<br>
+            </p>
+            <pre>
+&lt;div class=&quot;form-row clearfix&quot;&gt;
+ &lt;label for=&quot;customfield&quot; class=&quot;req&quot;&gt;Message *&lt;/label&gt;
+  &lt;div class=&quot;form-value&quot;&gt;
+   &lt;input type=&quot;text&quot; name=&quot;customfield&quot; class=&quot;customfield&quot; id=&quot;customfield&quot; value=&quot;&quot; /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+			<p>
+            	When adding a new field you also need to add these fieldnames in the hidden field <span class="accent">fields</span> seperated and ending by a ",".<br> Change also the email and the Subject Name.
+            </p>
+            <pre>
+&lt;input type=&quot;hidden&quot; name=&quot;subject&quot; <b>value=&quot;Contact Subject Xone html&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;fields&quot; <b>value=&quot;name,email,message,customfield,&quot;</b> /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;sendto&quot; <b>value=&quot;YOUREMAIL@SERVER.com&quot;</b> /&gt;</pre>
+			<p>
+            	Please add an form-note message at the wanted position.  This message will be displayed if there are any errors/success. 
+            </p>
+            <pre>
+&lt;div id=&quot;form-note&quot;&gt;
+ &lt;div class="alert alert-error">
+  &lt;h6>&lt;strong>Error&lt;/strong>: Please check your entries!&lt;/h6>
+ &lt;/div>
+&lt;/div&gt;</pre>
+			<p class="attention">
+            <strong>Note</strong>: If you have good php knowledge you can take a look at the contact-send.php and change it if you want. The javascript check function is in xone-form.js
+            </p>
+          </div>
+		  
+		  
+		  	<div id="map" class="section">
+           	<h4 class="sectiontitle"><strong>Google Map</strong></h4>
+            <p>
+            	Search first for your longitude and latitude on <a href="http://itouchmap.com/latlong.html" target="_blank">itouchmap.com</a>.<br>
+                Once you got them use this script to add your google map.
+            The map will always take the full width of the parent container. You just need to set up the height vie inline css.</p> 
+            <pre>
+&lt;div id=&quot;map&quot; class=&quot;header-map&quot; style=&quot;height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://maps.google.com/maps/api/js?sensor=false&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt
+   function mapinitialize() {
+      var latlng = new google.maps.LatLng(-33.86938,151.204834);
+      var myOptions = {
+         zoom: 14,
+         center: latlng
+         scrollwheel: true,
+         scaleControl: false,
+         disableDefaultUI: false,
+         mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      
+      var map = new google.maps.Map(document.getElementById(&quot;map&quot;),myOptions);
+      var image = &quot;files/uploads/map-pin.png&quot;;
+      var marker = new google.maps.Marker({
+         map: map,
+         icon: image,
+         position: map.getCenter()
+      });
+      
+      var contentString = '&lt;b&gt;Office&lt;/b&gt;&lt;br&gt;Streetname 13&lt;br&gt;50000 Sydney';
+      var infowindow = new google.maps.InfoWindow({
+         content: contentString
+      });
+      
+      google.maps.event.addListener(marker, 'click', function() {
+         infowindow.open(map,marker);
+      });
+      
+   }
+   mapinitialize();
+&lt;/script&gt;</pre>
+			<p>
+            	Change the map-pin image if you want and the Text for the infobox.
+            </p>
+          </div>
+          
+                    
+          <div id="elements" class="section">
+           	<h4 class="sectiontitle"><strong>Elements / Shortcodes</strong></h4>
+				<br><br>
+            	<h5><strong>Spacer</strong></h5>
+				<p>
+					If you already took a look at the html files you probably met some <strong>"spacer"</strong> elements.  These elements have been created to give you control over some spacings.  <br>For example I used them to add a spacing at the bottom of the last section of the page. 
+				</p>
+				<p>
+				 Just add a div with the classname spacer + the height of the spacer
+				</p>
+				<pre>&lt;div class="spacer spacer-big">&lt;/div></pre>
+				<ul>
+					<li><strong>spacer-big</strong> = 100px</li>
+					<li><strong>spacer-medium</strong> = 60px</li>
+					<li><strong>spacer-small</strong> = 40px</li>
+					<li><strong>spacer-mini</strong> = 15px</li>
+				</ul>
+				<br><br>
+            	<h5><strong>Seperator</strong></h5>
+				<p>
+					The seperator will create a seperator line.<br>
+					It's used for the section title for example, but you can use it where you want
+				</p>
+				<pre>&lt;div class="seperator size-small">&lt;span>&lt;/span>&lt;/div></pre>
+				<p>
+				By default it has a default width of 100% and a height of 2px but you can change it by just adding an additional classname with the size
+				</p>
+				<ul>
+					<li><strong>size-medium</strong> = width of 220px</li>
+					<li><strong>size-small</strong> = width of 100px</li>
+					<li><strong>size-mini</strong> = width of 40px</li>
+					<li><strong>height-small</strong> = height of 1px</li>
+				</ul>
+				<br><br>
+            	<h5><strong>Horizontal Section</strong></h5>
+				<p>
+					The horizontal section is used for make use of different background (parallax,videobg or bg color).
+				</p>
+				<pre>
+&lt;div class="horizontalsection">
+ &lt;div class="horizontalinner wrapper">
+  ...
+ &lt;/div>
+&lt;/div></pre>
+				<p>Use the markup above.  You see that the horizontalsection element is always followed by a horizontalinner.  This is important.  The horizontalsection has nor margin-top or margin-bottom because you could make use of another horizontalsection just below another and a margin wouldn't look good.  If you want a spacing between section, use a spacer element.</p> 
+				<br><br>
+            	<h5><strong>Animations</strong></h5>
+				<p>
+					In general you can use the animation for any element, but I really recommend to use it for normal/small elements like columns,icons,images, etc.  I would'tn use it for whole sections.
+				</p>
+				<p>
+					Add the classname sr-animation to the wanted element, the animation effect and the optional delay value.
+				</p>
+				<pre> &lt;div class="column one-third <strong>sr-animation sr-animation-zoomin</strong>" data-delay="200"></pre>
+				<ul>
+					<li><strong>sr-animation-fromtop</strong></li>
+					<li><strong>sr-animation-frombottom</strong></li>
+					<li><strong>sr-animation-fromleft</strong></li>
+					<li><strong>sr-animation-fromright</strong></li>
+					<li><strong>sr-animation-fade</strong></li>
+					<li><strong>sr-animation-zoomin</strong></li>
+					<li><strong>sr-animation-zoomout</strong></li>
+				</ul>
+				<br><br>
+            	<h5><strong>Icons</strong></h5>
+				<p>
+					This template uses the icon family <strong>Font Awesome</strong>.  You can place Font Awesome icons just about anywhere with the<strong> &lt;i></strong> tag.
+				</p>
+				<pre> &lt;i class="fa fa-check-square-o fa-3x"> &lt;/i></pre>
+				<p>
+					Please take a look here to have a full list of the available icons<br>
+					<a href="http://fontawesome.io/icons/" target="_blank">http://fontawesome.io/icons/</a>
+				</p>
+				<br><br>
+            	<h5><strong>Counter</strong></h5>
+				<p>
+					Use this markup to crate a counter
+				</p>
+				<pre>
+&lt;div class="counter">
+ &lt;div class="counter-value" data-from="0" data-to="237" data-speed="12">0&lt;/div>
+ &lt;h6 class="counter-name">&lt;strong>Projects Completed&lt;/strong>&lt;/h6>
+&lt;/div></pre>
+				<br><br>
+            	<h5><strong>Pricing Tables</strong></h5>
+				<p>
+					Use the default cokumn markup to choose the number of columns you need and place this code in between.
+				</p>
+				<pre>
+&lt;div class="column one-third">
+
+ &lt;div class="pricing-table <strong>pricing-accent</strong> align-center">
+  &lt;h5 class="price-name">&lt;strong>Basic&lt;/strong>&lt;/h5>
+  &lt;div class="price">
+   &lt;span class="price-amount">$70&lt;/span>  
+   &lt;span class="price-time">/ Month&lt;/span>  
+  &lt;/div>
+  &lt;ul class="price-options list-nostyle">
+   &lt;li>&lt;strong>200 GB&lt;/strong> disk space&lt;/li>
+   &lt;li>&lt;strong>10 GB&lt;/strong> mothly traffic&lt;/li>
+   &lt;li>&lt;strong>5&lt;/strong> subdomains&lt;/li>
+   &lt;li>&lt;strong>5&lt;/strong> Email Accounts&lt;/li>
+  &lt;/ul>
+  &lt;div class="price-button">
+   &lt;a href="#" class="sr-button sr-button5 medium-button">Sign Up&lt;/a>
+  &lt;/div>
+ &lt;/div>	
+                                 
+&lt;/div> &lt;!-- END .column --></pre>
+				<p>Use the class "pricing-accent" for the table you want to amke slightly bigger and colored.</p>
+			</div>
+			
+			<div id="retina" class="section">
+           	<h4 class="sectiontitle"><strong>Retina</strong></h4>
+            	<br><br>
+            	<h5><strong>Css (Template Icons)</strong></h5>
+            <p>
+            	This template is Retina Ready which means that all icons (files/images) which are part of the template will be displayed on high-resolution on retina devices.<br>
+                This is managed in the <span class="accent">retina.css</span>.  Please take a look.  If you add new background-images to the css please add them also in the retina.css.<br>
+            </p>
+            <br><br>
+            <h5><strong>Javascript (Your custom images)</strong></h5>
+            <p>
+            	All pages include the retina.js.  When your users load a page, <span class="accent">retina.js</span> checks each image on the page to see if there is a high-resolution (@2x) version of that image on your server. If a high-resolution variant exists, the script will swap in that image in-place.
+            </p>
+			<p>
+				<b>Example</b><br>
+				The logo image file is available in 2 version (xone-logo.png + xone-logo@2x.png).
+				On retina devices the @2x.png file is included.
+			</p>
+			<p class="attention">
+				<b>Note</b><br>The retina.js can only apply on online server and won't work if files are opened locally.
+			</p>
+          </div>
+          
+          <div id="css" class="section">
+           	<h4 class="sectiontitle"><strong>Css Files</strong></h4>
+            <p>
+            You should find the following css files 
+            </p> 
+            <ol>
+            	<li><span class="accent">style.css</span> -> main style <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">font-awesome.min.css</span> -> css for font awsome icons <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">retina.css</span> -> replacing images for retina devices <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">mqueries.css</span> -> css rules for being responsive <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">flexslider.css</span> -> style for flexslider (content sliders)</li>
+            	<li><span class="accent">isotope.css</span> -> style for isotope animations (portfolio filter)</li>
+            	<li><span class="accent">easy-opener.css</span> -> style for easy-opener (lightbox for videos)</li>
+            	<li><span class="accent">dark.css</span> -> style for a dark color sheme (see below)</li>
+            	<li><span class="accent">jplayer/jplayer.css</span> -> style for jplayer plugin (selhosted video/audio)</li>
+            	<li><span class="accent">rs-plugin/css/settings.css</span> -> style for revolution slider plugin (home slider)</li>
+            </ol>
+            <p>
+            	All css files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				The other files are only needed if you use the appropriate jquery script in the file.
+            </p>
+			<p>
+				<b>Example:</b><br>
+				The jplayer.css from the jplayer plugin is only included in the blog.html because that's the only file which uses the plugin.
+			</p>
+			<p class="attention">
+            	<strong>Note:</strong>
+                The mqueries.css must always be the last css file!
+            </p> 
+				<br><br>
+				<h5><strong>Dark</strong></h5>
+				<p>
+					If you want to have a dark color sheme, just include the dark.css before the mqueries.css css files.  Now, if you want to change some colors (ie. background for header), please do the changes in the dark.css because this is now the file which manages all dark/light colors except the 'main color' (blue in the original files). 
+				</p>
+				<pre>
+...
+&lt;link rel='stylesheet' href='files/css/retina.css' type='text/css' media='all' />
+<b>&lt;link rel='stylesheet' href='files/css/dark.css' type='text/css' media='all' /></b>
+&lt;link rel='stylesheet' href='files/css/mqueries.css' type='text/css' media='all' />
+&lt;!-- CSS -->
+</pre>
+				<br><br>
+				<h5><strong>Customize css</strong></h5>
+				<p>
+					I recommend to do all customizations at the bottom of the style.css and overwrite the different selectors.  You should find a CUSTOM Section.  If there is an update of the template you can easily copy your customization to the updated style.css.
+				</p>
+				<p>You see for example that I did a small position tweaking for both iconbuttons I used, in order to make them centered vertically + horizontally.  I also put the parrallax section there.<br>
+				These are all some tweaks which you probably will change.
+				</p>
+				<pre>
+/*---------------------------------------------- 
+CUSTOM
+------------------------------------------------*/
+.sr-buttonicon .fa-play { left: 4px; position:relative; }
+.sr-buttonicon .fa-angle-up { left: 2px; top: -2px; position:relative; }
+
+.xone { color: #4da5f5; }
+	
+/*	parallax bg sections
+------------------------------------------------*/
+#facts.parallax-section { background:url(../uploads/parallax-bg1.jpg) ... }
+#testimonials.parallax-section { background:url(../uploads/parallax-bg2.jpg) ... }
+#passionate.parallax-section { background:url(../uploads/parallax-bg3.jpg) ... }
+				</pre>
+          </div>
+          
+          <div id="javascript" class="section">
+           	<h4 class="sectiontitle"><strong>Javascript</strong></h4>
+            <p>
+            You should find the following js files 
+            </p> 
+            <ol>
+            	<li><span class="accent">jquery-1.9.1.min.js</span> -> jquery library <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">script.js</span> -> initiaise all different scripts <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">retina.js</span> -> retina script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.modernizr.min.js</span> -> modernizr script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.compatibility.js</span> -> easing compatibility <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.easing.1.3.js</span> -> easing script <span class="red"><b>!important</b></span></li>
+            	<li><span class="accent">jquery.visible.min.js</span> -> visible script <span class="red"><b>!important</b></li>
+            	<li><span class="accent">xone-header.js</span> -> shrinking header script <span class="red"><b>!important</b></li>
+            	<li><span class="accent">jquery.flexslider-min.js</span> -> flexsider script</li>
+            	<li><span class="accent">jquery.isotope.min.js</span> -> masonry script</li>
+            	<li><span class="accent">jquery.bgvideo.min.js</span> -> background video script</li>
+            	<li><span class="accent">jquery.counter.min.js</span> -> script for counters</li>
+            	<li><span class="accent">jquery.easy-opener.min.js</span> -> script for open video in lightbox</li>
+            	<li><span class="accent">jquery.fitvids.min.js</span> -> size up/down all videos to parent container</li>
+            	<li><span class="accent">jquery.parallax.min.js</span> -> image parallax background script</li>
+            	<li><span class="accent">jquery.scroll.min.js</span> -> one page scrolling effect</li>
+            	<li><span class="accent">xone-loader.js</span> -> ajax portfolio loader</li>
+            	<li><span class="accent">xone-form.js</span> -> checks the contact form</li>
+            	<li><span class="accent">files/jplayer/jquery.jplayer.min.js</span> -> jplayer script (selfhosted audio/video)</li>
+            	<li><span class="accent">files/rs-plugin/js/jquery.themepunch.plugins.min.js</span> -> revolution slider script</li>
+            	<li><span class="accent">files/rs-plugin/js/jquery.themepunch.revolution.min.js</span> -> revolution slider script</li>
+            </ol>
+            	<p>
+            	All js files with <span class="red"><b>!important</b></span> must be included in all html files.<br>
+				Please include the other script only when needed.  This will increase the page speed.
+            	</p>
+				<p>
+				<b>Example:</b><br>
+				The bgvideo.js is only included in the index template because it's the only page which has a video bg section. Same for revolutionslider.
+				</p>
+				<p class="attention">
+            	<strong>Note:</strong>
+                The script.js <b>must always</b> be the last js file!  This is also the file you can edit if needed.
+            	</p>
+				<p class="attention">
+            	<strong>Note:</strong>
+                All scripts are included at the bottom of the html before closing the body tag.  <br>
+				<b>Exception</b>: jquery library + modernizr are included at the top of the page below the css files.
+            	</p>
+				<pre>
+...				
+&lt;!-- CSS -->
+
+&lt;!-- JQUERY LIBRARY & MODERNIZR -->
+&lt;script src="files/js/jquery-1.9.1.min.js"></script>
+&lt;script src='files/js/jquery.modernizr.min.js'></script>
+&lt;!-- JQUERY LIBRARY & MODERNIZR -->
+				</pre>
+          </div>
+          
+          
+          
+          <div id="ressources" class="section">
+           	<h4 class="sectiontitle"><strong>Ressources</strong></h4>
+            <ul>
+                <li>latest jquery version: jQuery from John Resig <br><a href="http://jquery.com/">http://jquery.com/</a></li>
+                <li>jquery.modernizr.min.js: Modernizr from Modernizr <br><a href="http://www.modernizr.com/">http://www.modernizr.com/</a></li>
+                <li>jquery.isotope.min.js: Isotope from David DeSandro <br><a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
+                <li>jquery.easing.1.3.js: Easing from George Smith <br><a href="http://gsgd.co.uk/sandbox/jquery.easIng.php">http://gsgd.co.uk/sandbox/jquery.easIng.php</a></li>
+                <li>jquery.flexslider-min.js: Flexslider from madebymuffin.com <br><a href="http://www.woothemes.com/flexslider/">http://www.woothemes.com/flexslider/</a></li>
+                <li>jquery.jplayer.min.js: jPlayer from Happyworm Ltd <br><a href="http://www.jplayer.org/">http://www.jplayer.org/</a></li>
+                <li>retina.js: Retina script from retinajs.com <br><a href="http://retinajs.com/">http://retinajs.com/</a></li>
+                <li>jquery.fitvids.min.js: Video Fits <br><a href="http://fitvidsjs.com/">http://fitvidsjs.com/</a></li>
+                <li>jquery.visible.min.js: Check the visibility <br><a href="https://github.com/teamdf/jquery-visible/">https://github.com/teamdf/jquery-visible/</a></li>
+                <li>jquery.themepunch.revolution.min.js: Slider script from themepunch.com <br><a href="http://codecanyon.net/item/slider-revolution-responsive-jquery-plugin/2580848">revolution slider</a></li>
+            </ul>
+				<p>
+					All other scripts are done by SpabRice and are only allowed to use within this template.
+				</p>
+          </div>
+          
+          <div id="faq" class="section">
+           	<h4 class="sectiontitle"><strong>Frequently asked Questions</strong></h4>
+			
+		  		<div class="question">
+					<h6><strong>After clicking on a Portfolio item it doesn't load.</strong></h6>
+					<p class="answer">Are you working with <strong>Google Chrome</strong>?  If yes, please note that chrome does not support AJAX when opening the files locally.  So please try another browser or upload it to a webserver.
+					</p>
+            	</div>
+				
+				<div class="question">
+					<h6><strong>My Logo (or images) are not retina ready, although the @2x version exists.</strong></h6>
+					<p class="answer">The retina.js can only apply on webserver, so it doesnt work locally.  If you followed the instruction in Retina above, all should be fine once uplaoded to a web server.
+					</p>
+            	</div>
+			</div>	
+			
+          <div id="updates" class="section">
+           	<h4 class="sectiontitle"><strong>Updates</strong></h4>
+          	<p>
+            	<strong>For a full list please see the changelog.txt.</strong>
+            </p>
+              	<p>
+				You only need to update/replace the files which have been edited (if needed).
+				</p>
+          </div>
+            
+        </div>        
+        
+	</div>
+
+</div><!-- #page -->    
+</body>
+</html>
